@@ -33,6 +33,7 @@ public class AppiumEnv {
             driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
             driver.hideKeyboard();
             }
+        System.out.println("pass");
         return driver;
 
     }

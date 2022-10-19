@@ -1,8 +1,8 @@
-package apptest.pages.mihome.mainpage.device;
+package pages.mihome.mainpage.device;
 
 import org.openqa.selenium.support.FindBy;
 
-import apptest.pages.common.Page;
+import pages.common.Page;
 import io.appium.java_client.MobileElement;
 
 public class SetDeviceNamePage extends Page{

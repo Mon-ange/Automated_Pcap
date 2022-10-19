@@ -24,7 +24,7 @@ public class Page {
     public enum DIRECTION {
         UP, DOWN, LEFT, RIGHT, UPLEFT, UPRIGHT;
     }
-    protected static AppiumDriver<MobileElement> driver;
+    public static AppiumDriver<MobileElement> driver;
     public Page() {
         this.driver = Globals.driver;
         PageFactory.initElements(new AppiumFieldDecorator(this.driver, Duration.ofSeconds(60)), this);

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [MICapturePackage]">
+  <parameter name="productLocation" value="中国大陆"/>
+  <parameter name="pcap-output-path" value="test-output/MICapturePackage"/>
+  <parameter name="productName" value="RRA64"/>
+  <listeners>
+    <listener class-name="bootstrap.TestEnvBootstrap"/>
+  </listeners>
+  <test name="MihomeCapturePackageTest(failed)">
+    <classes>
+      <class name="autobusinesstest.pcaptest.MihomeCapturePackageTest">
+        <methods>
+          <include name="setup"/>
+          <include name="errorImageTest"/>
+          <include name="remoteControlTest"/>
+          <include name="updatedCleanTest"/>
+          <include name="downloadVoiceTest"/>
+          <include name="normalCleanTest"/>
+          <include name="addDeviceTest"/>
+          <include name="firmwareUpdateTest"/>
+          <include name="maintenanceTest"/>
+          <include name="sheduledCleanTest"/>
+        </methods>
+      </class> <!-- autobusinesstest.pcaptest.MihomeCapturePackageTest -->
+    </classes>
+  </test> <!-- MihomeCapturePackageTest(failed) -->
+</suite> <!-- Failed suite [MICapturePackage] -->

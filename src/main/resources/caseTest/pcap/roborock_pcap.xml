@@ -1,0 +1,25 @@
+<suite name="RRCapturePackage" verbose="1" >
+    <listeners>
+        <listener class-name="bootstrap.TestEnvBootstrap"/>
+    </listeners>
+    <parameter name="pcap-output-path" value="test-output/RRCapturePackage"></parameter>
+    <parameter name="productName" value="G10S"></parameter>
+    <test name="RoborockCapturePackageTest" >
+        <classes>
+            <class name="autobusinesstest.pcaptest.RoborockCapturePackageTest">
+                <methods>
+                    <include name="addDeviceTest"></include>
+                    <include name="productGuideTest"></include>
+                    <include name="downloadVoiceTest"></include>
+                    <include name="normalCleanTest"></include>
+                    <include name="firmwareUpdateTest"></include>
+                    <include name="updatedCleanTest"></include>
+                    <include name="sheduledCleanTest"></include>
+                    <include name="remoteControlTest"></include>
+                    <include name="maintenanceTest"></include>
+                    <include name="errorImageTest"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

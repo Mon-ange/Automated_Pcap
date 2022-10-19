@@ -9,19 +9,35 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import pages.common.Globals;
+import pages.mihome.hint.AuthorityPages;
+import pages.mihome.hint.MihomeAllowLoacatingHintPage;
+import pages.mihome.hint.PluginPrivacyAgreementHint;
+import pages.mihome.mainpage.LoginedMihomeMainPage;
+import pages.mihome.mainpage.device.MoreSettingsPage;
+import pages.mihome.mainpage.device.SetDeviceNamePage;
+import pages.mihome.mainpage.device.SetRoomPage;
+import pages.mihome.mainpage.device.ShareWithFamiliesPage;
+import pages.mihome.mainpage.initialization.MihomeInitializationPage;
+import pages.mihome.plugin.hint.StartUpHints;
+import utils.PacketCapturer;
 
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 
 public class MihomeCapturePackageTest {
     private static Logger logger = LoggerFactory.getLogger(MihomeCapturePackageTest.class);
 
-    //private Path outputPath;
+    private Path outputPath;
 
     @BeforeClass
     @Parameters({"pcap-output-path","productLocation"})
     public void setup(String pcapOutputPath,String productLocation) throws IOException, InterruptedException {
-        /*System.out.println("Mihome Capture Package Test Suite setting up....");
+        System.out.println("Mihome Capture Package Test Suite setting up....");
         //0.创建抓包结果目录
         createPcapDirectory(pcapOutputPath);
         //1.log in
@@ -29,12 +45,10 @@ public class MihomeCapturePackageTest {
                 .clickLogin()
                 .login(Globals.params.get("mihome.username"), Globals.params.get("mihome.password"),productLocation);
         //2.处理权限及引导弹窗
-
-        //有内测版本提示又不想升级
         //new CancelledUpdatePages().cencelledUpdateApp();
 
         new MihomeAllowLoacatingHintPage().finishHint();
-        new AuthorityPages().allowLocatingInUse();*/
+        new AuthorityPages().allowLocatingInUse();
     }
 
     @BeforeMethod
@@ -47,7 +61,6 @@ public class MihomeCapturePackageTest {
     @Test
     @Parameters("productName")
     public void addDeviceTest(String productName) throws PcapNativeException, NotOpenException, InterruptedException {//快连添加设备
-/*
         PacketCapturer packetCapturer = new PacketCapturer(outputPath.resolve("addDevice.pcap").toString());
         packetCapturer.startCapture();
 
@@ -68,95 +81,94 @@ public class MihomeCapturePackageTest {
         //stop the capture
         packetCapturer.stopCapture();
 
- */
     }
 
     @Test
     @Parameters("productName")
     public void downloadVoiceTest(String productName) throws PcapNativeException, NotOpenException, InterruptedException {//下载语音包
-        /*PacketCapturer packetCapturer = new PacketCapturer(outputPath.resolve("downloadVoice.pcap").toString());
+        PacketCapturer packetCapturer = new PacketCapturer(outputPath.resolve("downloadVoice.pcap").toString());
         packetCapturer.startCapture();
         new LoginedMihomeMainPage().clickSpecificDevice(productName).clickSetting().clickSoundPackage().clickAll();
-        packetCapturer.stopCapture();*/
+        packetCapturer.stopCapture();
     }
 
     @Test
     @Parameters("productName")
     public void productGuideTest(String productName) throws PcapNativeException, NotOpenException, InterruptedException {//产品百科
-        /*PacketCapturer packetCapturer = new PacketCapturer(outputPath.resolve("productGuide.pcap").toString());
+        PacketCapturer packetCapturer = new PacketCapturer(outputPath.resolve("productGuide.pcap").toString());
         packetCapturer.startCapture();
         new LoginedMihomeMainPage().clickSpecificDevice(productName).clickSetting().clickproductGuide().goBack();
-        packetCapturer.stopCapture();*/
+        packetCapturer.stopCapture();
     }
 
     @Test
     @Parameters("productName")
     public void normalCleanTest(String productName) throws PcapNativeException, NotOpenException, InterruptedException {//正常清扫
-        /*PacketCapturer packetCapturer = new PacketCapturer(outputPath.resolve("normalClean.pcap").toString());
+        PacketCapturer packetCapturer = new PacketCapturer(outputPath.resolve("normalClean.pcap").toString());
         packetCapturer.startCapture();
         new LoginedMihomeMainPage().clickSpecificDevice(productName).doClean();
-        packetCapturer.stopCapture();*/
+        packetCapturer.stopCapture();
     }
 
     @Test
     @Parameters("productName")
     public void updatedCleanTest(String productName) throws PcapNativeException, NotOpenException, InterruptedException {//正常清扫
-        /*PacketCapturer packetCapturer = new PacketCapturer(outputPath.resolve("updatedClean.pcap").toString());
+        PacketCapturer packetCapturer = new PacketCapturer(outputPath.resolve("updatedClean.pcap").toString());
         packetCapturer.startCapture();
         new LoginedMihomeMainPage().clickSpecificDevice(productName).doClean();
-        packetCapturer.stopCapture();*/
+        packetCapturer.stopCapture();
     }
 
     @Test
     @Parameters("productName")
     public void firmwareUpdateTest(String productName) throws PcapNativeException, NotOpenException, InterruptedException {//固件升级
-        /*PacketCapturer packetCapturer = new PacketCapturer(outputPath.resolve("firmwareUpdate.pcap").toString());
+        PacketCapturer packetCapturer = new PacketCapturer(outputPath.resolve("firmwareUpdate.pcap").toString());
         packetCapturer.startCapture();
         new LoginedMihomeMainPage().clickSpecificDevice(productName).clickSetting().clickFirmwareUpdate().immediatelyUpdate().goBack();
-        packetCapturer.stopCapture();*/
+        packetCapturer.stopCapture();
     }
 
     @Test
     @Parameters("productName")
     public void maintenanceTest(String productName) throws PcapNativeException, NotOpenException, InterruptedException {//耗材维护
-        /*PacketCapturer packetCapturer = new PacketCapturer(outputPath.resolve("maintenance.pcap").toString());
+        PacketCapturer packetCapturer = new PacketCapturer(outputPath.resolve("maintenance.pcap").toString());
         packetCapturer.startCapture();
         new LoginedMihomeMainPage().clickSpecificDevice(productName).clickSetting().checkSupplies().checkAll();
-        packetCapturer.stopCapture();*/
+        packetCapturer.stopCapture();
     }
 
     @Test
     @Parameters("productName")
     public void errorImageTest(String productName) throws PcapNativeException, NotOpenException, InterruptedException {
-        /*PacketCapturer packetCapturer = new PacketCapturer(outputPath.resolve("errorImage.pcap").toString());
+        PacketCapturer packetCapturer = new PacketCapturer(outputPath.resolve("errorImage.pcap").toString());
         packetCapturer.startCapture();
         new LoginedMihomeMainPage().clickSpecificDevice(productName).makeError();
-        packetCapturer.stopCapture();*/
+        packetCapturer.stopCapture();
     }
 
     @Test
     @Parameters("productName")
     public void sheduledCleanTest(String productName) throws NotOpenException, PcapNativeException, InterruptedException {
-        /*PacketCapturer packetCapturer = new PacketCapturer(outputPath.resolve("sheduledClean.pcap").toString());
+        PacketCapturer packetCapturer = new PacketCapturer(outputPath.resolve("sheduledClean.pcap").toString());
         packetCapturer.startCapture();
         new LoginedMihomeMainPage().clickSpecificDevice(productName).clickSetting().clickTimer().startTimer().confirmTimer().backToSpec().dockBack();
-        packetCapturer.stopCapture();*/
+        packetCapturer.stopCapture();
     }
 
     @Test
     @Parameters("productName")
     public void remoteControlTest(String productName) throws NotOpenException, PcapNativeException, InterruptedException {
-        /*PacketCapturer packetCapturer = new PacketCapturer(outputPath.resolve("remoteControl.pcap").toString());
+        PacketCapturer packetCapturer = new PacketCapturer(outputPath.resolve("remoteControl.pcap").toString());
         packetCapturer.startCapture();
         new LoginedMihomeMainPage().clickSpecificDevice(productName).clickSetting().clickRemote().remote();
-        packetCapturer.stopCapture();*/
+        packetCapturer.stopCapture();
     }
     private void createPcapDirectory(String path) throws IOException {
-        /*LocalDateTime now = LocalDateTime.now();
+        LocalDateTime now = LocalDateTime.now();
         String outputDir = "pcap-test" + DateTimeFormatter.ofPattern("yyyy-MM-dd HH-mm-ss").format(now);
         outputPath = Paths.get(path).resolve(outputDir);
         //System.out.println("outputPath: " + outputPath.toString());
         Path absolutePath = Files.createDirectories(outputPath).toAbsolutePath();
-        // System.out.println("absolutePath" + absolutePath.toString());*/
+        // System.out.println("absolutePath" + absolutePath.toString());
     }
 }

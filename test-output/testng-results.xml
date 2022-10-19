@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results total="9" passed="9" failed="0" skipped="0">
+<testng-results total="9" passed="0" failed="0" skipped="9">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-10-19T10:58:16Z" name="MICapturePackage" finished-at="2022-10-19T10:58:52Z" duration-ms="35863">
+  <suite started-at="2022-10-19T16:01:13Z" name="MICapturePackage" finished-at="2022-10-19T16:01:41Z" duration-ms="28423">
     <groups>
     </groups>
-    <test started-at="2022-10-19T10:58:16Z" name="MihomeCapturePackageTest" finished-at="2022-10-19T10:58:52Z" duration-ms="35863">
+    <test started-at="2022-10-19T16:01:13Z" name="MihomeCapturePackageTest" finished-at="2022-10-19T16:01:41Z" duration-ms="28423">
       <class name="autobusinesstest.pcaptest.MihomeCapturePackageTest">
-        <test-method is-config="true" signature="setup(java.lang.String, java.lang.String)[pri:0, instance:autobusinesstest.pcaptest.MihomeCapturePackageTest@33b37288]" started-at="2022-10-19T03:58:40Z" name="setup" finished-at="2022-10-19T03:58:40Z" duration-ms="9" status="PASS">
+        <test-method is-config="true" signature="setup(java.lang.String, java.lang.String)[pri:0, instance:autobusinesstest.pcaptest.MihomeCapturePackageTest@11c20519]" started-at="2022-10-19T09:01:41Z" name="setup" finished-at="2022-10-19T09:01:41Z" duration-ms="0" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -20,14 +20,77 @@
               </value>
             </param>
           </params>
+          <exception class="java.lang.ExceptionInInitializerError">
+            <full-stacktrace>
+              <![CDATA[java.lang.ExceptionInInitializerError
+	at io.appium.java_client.pagefactory.utils.ProxyFactory.getEnhancedProxy(ProxyFactory.java:52)
+	at io.appium.java_client.pagefactory.utils.ProxyFactory.getEnhancedProxy(ProxyFactory.java:33)
+	at io.appium.java_client.pagefactory.AppiumFieldDecorator.proxyForAnElement(AppiumFieldDecorator.java:222)
+	at io.appium.java_client.pagefactory.AppiumFieldDecorator.access$0(AppiumFieldDecorator.java:220)
+	at io.appium.java_client.pagefactory.AppiumFieldDecorator$1.proxyForLocator(AppiumFieldDecorator.java:105)
+	at org.openqa.selenium.support.pagefactory.DefaultFieldDecorator.decorate(DefaultFieldDecorator.java:62)
+	at io.appium.java_client.pagefactory.AppiumFieldDecorator.decorate(AppiumFieldDecorator.java:160)
+	at org.openqa.selenium.support.PageFactory.proxyFields(PageFactory.java:113)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:105)
+	at pages.common.Page.<init>(Page.java:30)
+	at pages.mihome.mainpage.initialization.MihomeInitializationPage.<init>(MihomeInitializationPage.java:9)
+	at autobusinesstest.pcaptest.MihomeCapturePackageTest.setup(MihomeCapturePackageTest.java:44)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:564)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:213)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:138)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:175)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:107)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+Caused by: net.sf.cglib.core.CodeGenerationException: java.lang.reflect.InaccessibleObjectException-->Unable to make protected final java.lang.Class java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain) throws java.lang.ClassFormatError accessible: module java.base does not "opens java.lang" to unnamed module @2752f6e2
+	at net.sf.cglib.core.ReflectUtils.defineClass(ReflectUtils.java:464)
+	at net.sf.cglib.core.AbstractClassGenerator.generate(AbstractClassGenerator.java:339)
+	at net.sf.cglib.core.AbstractClassGenerator$ClassLoaderData$3.apply(AbstractClassGenerator.java:96)
+	at net.sf.cglib.core.AbstractClassGenerator$ClassLoaderData$3.apply(AbstractClassGenerator.java:94)
+	at net.sf.cglib.core.internal.LoadingCache$2.call(LoadingCache.java:54)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at net.sf.cglib.core.internal.LoadingCache.createEntry(LoadingCache.java:61)
+	at net.sf.cglib.core.internal.LoadingCache.get(LoadingCache.java:34)
+	at net.sf.cglib.core.AbstractClassGenerator$ClassLoaderData.get(AbstractClassGenerator.java:119)
+	at net.sf.cglib.core.AbstractClassGenerator.create(AbstractClassGenerator.java:294)
+	at net.sf.cglib.core.KeyFactory$Generator.create(KeyFactory.java:221)
+	at net.sf.cglib.core.KeyFactory.create(KeyFactory.java:174)
+	at net.sf.cglib.core.KeyFactory.create(KeyFactory.java:153)
+	at net.sf.cglib.proxy.Enhancer.<clinit>(Enhancer.java:73)
+	... 33 more
+Caused by: java.lang.reflect.InaccessibleObjectException: Unable to make protected final java.lang.Class java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain) throws java.lang.ClassFormatError accessible: module java.base does not "opens java.lang" to unnamed module @2752f6e2
+	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:354)
+	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:297)
+	at java.base/java.lang.reflect.Method.checkCanSetAccessible(Method.java:200)
+	at java.base/java.lang.reflect.Method.setAccessible(Method.java:194)
+	at net.sf.cglib.core.ReflectUtils$1.run(ReflectUtils.java:61)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:569)
+	at net.sf.cglib.core.ReflectUtils.<clinit>(ReflectUtils.java:52)
+	at net.sf.cglib.core.KeyFactory$Generator.generateClass(KeyFactory.java:243)
+	at net.sf.cglib.core.DefaultGeneratorStrategy.generate(DefaultGeneratorStrategy.java:25)
+	at net.sf.cglib.core.AbstractClassGenerator.generate(AbstractClassGenerator.java:332)
+	... 45 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.ExceptionInInitializerError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method is-config="true" signature="reboot()[pri:0, instance:autobusinesstest.pcaptest.MihomeCapturePackageTest@33b37288]" started-at="2022-10-19T03:58:40Z" name="reboot" finished-at="2022-10-19T03:58:42Z" duration-ms="1467" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- reboot -->
-        <test-method signature="addDeviceTest(java.lang.String)[pri:0, instance:autobusinesstest.pcaptest.MihomeCapturePackageTest@33b37288]" started-at="2022-10-19T03:58:42Z" name="addDeviceTest" finished-at="2022-10-19T03:58:42Z" duration-ms="1" status="PASS">
+        <test-method signature="addDeviceTest(java.lang.String)[pri:0, instance:autobusinesstest.pcaptest.MihomeCapturePackageTest@11c20519]" started-at="2022-10-19T09:01:41Z" name="addDeviceTest" finished-at="2022-10-19T09:01:41Z" duration-ms="1" status="SKIP">
           <params>
             <param index="0">
               <value>
@@ -38,11 +101,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addDeviceTest -->
-        <test-method is-config="true" signature="reboot()[pri:0, instance:autobusinesstest.pcaptest.MihomeCapturePackageTest@33b37288]" started-at="2022-10-19T03:58:42Z" name="reboot" finished-at="2022-10-19T03:58:43Z" duration-ms="1269" status="PASS">
+        <test-method is-config="true" signature="reboot()[pri:0, instance:autobusinesstest.pcaptest.MihomeCapturePackageTest@11c20519]" started-at="2022-10-19T09:01:41Z" name="reboot" finished-at="2022-10-19T09:01:41Z" duration-ms="0" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- reboot -->
-        <test-method signature="downloadVoiceTest(java.lang.String)[pri:0, instance:autobusinesstest.pcaptest.MihomeCapturePackageTest@33b37288]" started-at="2022-10-19T03:58:43Z" name="downloadVoiceTest" finished-at="2022-10-19T03:58:43Z" duration-ms="0" status="PASS">
+        <test-method signature="downloadVoiceTest(java.lang.String)[pri:0, instance:autobusinesstest.pcaptest.MihomeCapturePackageTest@11c20519]" started-at="2022-10-19T09:01:41Z" name="downloadVoiceTest" finished-at="2022-10-19T09:01:41Z" duration-ms="0" status="SKIP">
           <params>
             <param index="0">
               <value>
@@ -53,11 +116,19 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- downloadVoiceTest -->
-        <test-method is-config="true" signature="reboot()[pri:0, instance:autobusinesstest.pcaptest.MihomeCapturePackageTest@33b37288]" started-at="2022-10-19T03:58:43Z" name="reboot" finished-at="2022-10-19T03:58:45Z" duration-ms="1308" status="PASS">
+        <test-method is-config="true" signature="reboot()[pri:0, instance:autobusinesstest.pcaptest.MihomeCapturePackageTest@11c20519]" started-at="2022-10-19T09:01:41Z" name="reboot" finished-at="2022-10-19T09:01:41Z" duration-ms="0" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- reboot -->
-        <test-method signature="normalCleanTest(java.lang.String)[pri:0, instance:autobusinesstest.pcaptest.MihomeCapturePackageTest@33b37288]" started-at="2022-10-19T03:58:45Z" name="normalCleanTest" finished-at="2022-10-19T03:58:45Z" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="reboot()[pri:0, instance:autobusinesstest.pcaptest.MihomeCapturePackageTest@11c20519]" started-at="2022-10-19T09:01:41Z" name="reboot" finished-at="2022-10-19T09:01:41Z" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- reboot -->
+        <test-method is-config="true" signature="reboot()[pri:0, instance:autobusinesstest.pcaptest.MihomeCapturePackageTest@11c20519]" started-at="2022-10-19T09:01:41Z" name="reboot" finished-at="2022-10-19T09:01:41Z" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- reboot -->
+        <test-method signature="normalCleanTest(java.lang.String)[pri:0, instance:autobusinesstest.pcaptest.MihomeCapturePackageTest@11c20519]" started-at="2022-10-19T09:01:41Z" name="normalCleanTest" finished-at="2022-10-19T09:01:41Z" duration-ms="0" status="SKIP">
           <params>
             <param index="0">
               <value>
@@ -68,15 +139,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- normalCleanTest -->
-        <test-method is-config="true" signature="reboot()[pri:0, instance:autobusinesstest.pcaptest.MihomeCapturePackageTest@33b37288]" started-at="2022-10-19T03:58:45Z" name="reboot" finished-at="2022-10-19T03:58:46Z" duration-ms="1262" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- reboot -->
-        <test-method is-config="true" signature="reboot()[pri:0, instance:autobusinesstest.pcaptest.MihomeCapturePackageTest@33b37288]" started-at="2022-10-19T03:58:46Z" name="reboot" finished-at="2022-10-19T03:58:47Z" duration-ms="1338" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- reboot -->
-        <test-method signature="firmwareUpdateTest(java.lang.String)[pri:0, instance:autobusinesstest.pcaptest.MihomeCapturePackageTest@33b37288]" started-at="2022-10-19T03:58:46Z" name="firmwareUpdateTest" finished-at="2022-10-19T03:58:46Z" duration-ms="0" status="PASS">
+        <test-method signature="firmwareUpdateTest(java.lang.String)[pri:0, instance:autobusinesstest.pcaptest.MihomeCapturePackageTest@11c20519]" started-at="2022-10-19T09:01:41Z" name="firmwareUpdateTest" finished-at="2022-10-19T09:01:41Z" duration-ms="0" status="SKIP">
           <params>
             <param index="0">
               <value>
@@ -87,7 +150,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- firmwareUpdateTest -->
-        <test-method signature="updatedCleanTest(java.lang.String)[pri:0, instance:autobusinesstest.pcaptest.MihomeCapturePackageTest@33b37288]" started-at="2022-10-19T03:58:47Z" name="updatedCleanTest" finished-at="2022-10-19T03:58:47Z" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="reboot()[pri:0, instance:autobusinesstest.pcaptest.MihomeCapturePackageTest@11c20519]" started-at="2022-10-19T09:01:41Z" name="reboot" finished-at="2022-10-19T09:01:41Z" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- reboot -->
+        <test-method signature="updatedCleanTest(java.lang.String)[pri:0, instance:autobusinesstest.pcaptest.MihomeCapturePackageTest@11c20519]" started-at="2022-10-19T09:01:41Z" name="updatedCleanTest" finished-at="2022-10-19T09:01:41Z" duration-ms="0" status="SKIP">
           <params>
             <param index="0">
               <value>
@@ -98,11 +165,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- updatedCleanTest -->
-        <test-method is-config="true" signature="reboot()[pri:0, instance:autobusinesstest.pcaptest.MihomeCapturePackageTest@33b37288]" started-at="2022-10-19T03:58:47Z" name="reboot" finished-at="2022-10-19T03:58:48Z" duration-ms="1236" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- reboot -->
-        <test-method signature="sheduledCleanTest(java.lang.String)[pri:0, instance:autobusinesstest.pcaptest.MihomeCapturePackageTest@33b37288]" started-at="2022-10-19T03:58:48Z" name="sheduledCleanTest" finished-at="2022-10-19T03:58:48Z" duration-ms="0" status="PASS">
+        <test-method signature="sheduledCleanTest(java.lang.String)[pri:0, instance:autobusinesstest.pcaptest.MihomeCapturePackageTest@11c20519]" started-at="2022-10-19T09:01:41Z" name="sheduledCleanTest" finished-at="2022-10-19T09:01:41Z" duration-ms="0" status="SKIP">
           <params>
             <param index="0">
               <value>
@@ -113,11 +176,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- sheduledCleanTest -->
-        <test-method is-config="true" signature="reboot()[pri:0, instance:autobusinesstest.pcaptest.MihomeCapturePackageTest@33b37288]" started-at="2022-10-19T03:58:48Z" name="reboot" finished-at="2022-10-19T03:58:50Z" duration-ms="1281" status="PASS">
+        <test-method is-config="true" signature="reboot()[pri:0, instance:autobusinesstest.pcaptest.MihomeCapturePackageTest@11c20519]" started-at="2022-10-19T09:01:41Z" name="reboot" finished-at="2022-10-19T09:01:41Z" duration-ms="0" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- reboot -->
-        <test-method signature="remoteControlTest(java.lang.String)[pri:0, instance:autobusinesstest.pcaptest.MihomeCapturePackageTest@33b37288]" started-at="2022-10-19T03:58:50Z" name="remoteControlTest" finished-at="2022-10-19T03:58:50Z" duration-ms="0" status="PASS">
+        <test-method signature="remoteControlTest(java.lang.String)[pri:0, instance:autobusinesstest.pcaptest.MihomeCapturePackageTest@11c20519]" started-at="2022-10-19T09:01:41Z" name="remoteControlTest" finished-at="2022-10-19T09:01:41Z" duration-ms="0" status="SKIP">
           <params>
             <param index="0">
               <value>
@@ -128,11 +191,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- remoteControlTest -->
-        <test-method is-config="true" signature="reboot()[pri:0, instance:autobusinesstest.pcaptest.MihomeCapturePackageTest@33b37288]" started-at="2022-10-19T03:58:50Z" name="reboot" finished-at="2022-10-19T03:58:51Z" duration-ms="1235" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- reboot -->
-        <test-method signature="maintenanceTest(java.lang.String)[pri:0, instance:autobusinesstest.pcaptest.MihomeCapturePackageTest@33b37288]" started-at="2022-10-19T03:58:51Z" name="maintenanceTest" finished-at="2022-10-19T03:58:51Z" duration-ms="1" status="PASS">
+        <test-method signature="maintenanceTest(java.lang.String)[pri:0, instance:autobusinesstest.pcaptest.MihomeCapturePackageTest@11c20519]" started-at="2022-10-19T09:01:41Z" name="maintenanceTest" finished-at="2022-10-19T09:01:41Z" duration-ms="0" status="SKIP">
           <params>
             <param index="0">
               <value>
@@ -143,11 +202,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- maintenanceTest -->
-        <test-method is-config="true" signature="reboot()[pri:0, instance:autobusinesstest.pcaptest.MihomeCapturePackageTest@33b37288]" started-at="2022-10-19T03:58:51Z" name="reboot" finished-at="2022-10-19T03:58:52Z" duration-ms="1294" status="PASS">
+        <test-method is-config="true" signature="reboot()[pri:0, instance:autobusinesstest.pcaptest.MihomeCapturePackageTest@11c20519]" started-at="2022-10-19T09:01:41Z" name="reboot" finished-at="2022-10-19T09:01:41Z" duration-ms="0" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- reboot -->
-        <test-method signature="errorImageTest(java.lang.String)[pri:0, instance:autobusinesstest.pcaptest.MihomeCapturePackageTest@33b37288]" started-at="2022-10-19T03:58:52Z" name="errorImageTest" finished-at="2022-10-19T03:58:52Z" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="reboot()[pri:0, instance:autobusinesstest.pcaptest.MihomeCapturePackageTest@11c20519]" started-at="2022-10-19T09:01:41Z" name="reboot" finished-at="2022-10-19T09:01:41Z" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- reboot -->
+        <test-method signature="errorImageTest(java.lang.String)[pri:0, instance:autobusinesstest.pcaptest.MihomeCapturePackageTest@11c20519]" started-at="2022-10-19T09:01:41Z" name="errorImageTest" finished-at="2022-10-19T09:01:41Z" duration-ms="0" status="SKIP">
           <params>
             <param index="0">
               <value>
@@ -158,6 +221,10 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- errorImageTest -->
+        <test-method is-config="true" signature="reboot()[pri:0, instance:autobusinesstest.pcaptest.MihomeCapturePackageTest@11c20519]" started-at="2022-10-19T09:01:41Z" name="reboot" finished-at="2022-10-19T09:01:41Z" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- reboot -->
       </class> <!-- autobusinesstest.pcaptest.MihomeCapturePackageTest -->
     </test> <!-- MihomeCapturePackageTest -->
   </suite> <!-- MICapturePackage -->
