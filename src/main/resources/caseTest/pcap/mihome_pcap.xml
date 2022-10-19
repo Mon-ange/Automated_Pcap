@@ -1,0 +1,27 @@
+<suite name="MICapturePackage" verbose="1" >
+    <listeners>
+        <listener class-name="bootstrap.TestEnvBootstrap"/>
+    </listeners>
+    <parameter name="pcap-output-path" value="test-output/MICapturePackage"></parameter>
+    <parameter name="productName" value="RRA64"></parameter>
+    <parameter name="productLocation" value="中国大陆"></parameter>
+    <test preserve-order="true" name="MihomeCapturePackageTest" >
+        <classes>
+            <class name="autobusinesstest.pcaptest.MihomeCapturePackageTest">
+                <methods>
+                    <include name="addDeviceTest"></include>
+                    <!--在米家APP7.10.701.6583版本插件里，米家删除了产品百科功能
+                    <include name="productGuideTest"></include> -->
+                    <include name="downloadVoiceTest"></include>
+                    <include name="normalCleanTest"></include>
+                    <include name="firmwareUpdateTest"></include>
+                    <include name="updatedCleanTest"></include>
+                    <include name="sheduledCleanTest"></include>
+                    <include name="remoteControlTest"></include>
+                    <include name="maintenanceTest"></include>
+                    <include name="errorImageTest"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

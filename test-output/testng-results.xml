@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results total="9" passed="9" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-10-19T10:58:16Z" name="MICapturePackage" finished-at="2022-10-19T10:58:52Z" duration-ms="35863">
+    <groups>
+    </groups>
+    <test started-at="2022-10-19T10:58:16Z" name="MihomeCapturePackageTest" finished-at="2022-10-19T10:58:52Z" duration-ms="35863">
+      <class name="autobusinesstest.pcaptest.MihomeCapturePackageTest">
+        <test-method is-config="true" signature="setup(java.lang.String, java.lang.String)[pri:0, instance:autobusinesstest.pcaptest.MihomeCapturePackageTest@33b37288]" started-at="2022-10-19T03:58:40Z" name="setup" finished-at="2022-10-19T03:58:40Z" duration-ms="9" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[test-output/MICapturePackage]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[中国大陆]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method is-config="true" signature="reboot()[pri:0, instance:autobusinesstest.pcaptest.MihomeCapturePackageTest@33b37288]" started-at="2022-10-19T03:58:40Z" name="reboot" finished-at="2022-10-19T03:58:42Z" duration-ms="1467" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- reboot -->
+        <test-method signature="addDeviceTest(java.lang.String)[pri:0, instance:autobusinesstest.pcaptest.MihomeCapturePackageTest@33b37288]" started-at="2022-10-19T03:58:42Z" name="addDeviceTest" finished-at="2022-10-19T03:58:42Z" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[RRA64]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addDeviceTest -->
+        <test-method is-config="true" signature="reboot()[pri:0, instance:autobusinesstest.pcaptest.MihomeCapturePackageTest@33b37288]" started-at="2022-10-19T03:58:42Z" name="reboot" finished-at="2022-10-19T03:58:43Z" duration-ms="1269" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- reboot -->
+        <test-method signature="downloadVoiceTest(java.lang.String)[pri:0, instance:autobusinesstest.pcaptest.MihomeCapturePackageTest@33b37288]" started-at="2022-10-19T03:58:43Z" name="downloadVoiceTest" finished-at="2022-10-19T03:58:43Z" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[RRA64]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- downloadVoiceTest -->
+        <test-method is-config="true" signature="reboot()[pri:0, instance:autobusinesstest.pcaptest.MihomeCapturePackageTest@33b37288]" started-at="2022-10-19T03:58:43Z" name="reboot" finished-at="2022-10-19T03:58:45Z" duration-ms="1308" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- reboot -->
+        <test-method signature="normalCleanTest(java.lang.String)[pri:0, instance:autobusinesstest.pcaptest.MihomeCapturePackageTest@33b37288]" started-at="2022-10-19T03:58:45Z" name="normalCleanTest" finished-at="2022-10-19T03:58:45Z" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[RRA64]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- normalCleanTest -->
+        <test-method is-config="true" signature="reboot()[pri:0, instance:autobusinesstest.pcaptest.MihomeCapturePackageTest@33b37288]" started-at="2022-10-19T03:58:45Z" name="reboot" finished-at="2022-10-19T03:58:46Z" duration-ms="1262" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- reboot -->
+        <test-method is-config="true" signature="reboot()[pri:0, instance:autobusinesstest.pcaptest.MihomeCapturePackageTest@33b37288]" started-at="2022-10-19T03:58:46Z" name="reboot" finished-at="2022-10-19T03:58:47Z" duration-ms="1338" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- reboot -->
+        <test-method signature="firmwareUpdateTest(java.lang.String)[pri:0, instance:autobusinesstest.pcaptest.MihomeCapturePackageTest@33b37288]" started-at="2022-10-19T03:58:46Z" name="firmwareUpdateTest" finished-at="2022-10-19T03:58:46Z" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[RRA64]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- firmwareUpdateTest -->
+        <test-method signature="updatedCleanTest(java.lang.String)[pri:0, instance:autobusinesstest.pcaptest.MihomeCapturePackageTest@33b37288]" started-at="2022-10-19T03:58:47Z" name="updatedCleanTest" finished-at="2022-10-19T03:58:47Z" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[RRA64]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- updatedCleanTest -->
+        <test-method is-config="true" signature="reboot()[pri:0, instance:autobusinesstest.pcaptest.MihomeCapturePackageTest@33b37288]" started-at="2022-10-19T03:58:47Z" name="reboot" finished-at="2022-10-19T03:58:48Z" duration-ms="1236" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- reboot -->
+        <test-method signature="sheduledCleanTest(java.lang.String)[pri:0, instance:autobusinesstest.pcaptest.MihomeCapturePackageTest@33b37288]" started-at="2022-10-19T03:58:48Z" name="sheduledCleanTest" finished-at="2022-10-19T03:58:48Z" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[RRA64]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- sheduledCleanTest -->
+        <test-method is-config="true" signature="reboot()[pri:0, instance:autobusinesstest.pcaptest.MihomeCapturePackageTest@33b37288]" started-at="2022-10-19T03:58:48Z" name="reboot" finished-at="2022-10-19T03:58:50Z" duration-ms="1281" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- reboot -->
+        <test-method signature="remoteControlTest(java.lang.String)[pri:0, instance:autobusinesstest.pcaptest.MihomeCapturePackageTest@33b37288]" started-at="2022-10-19T03:58:50Z" name="remoteControlTest" finished-at="2022-10-19T03:58:50Z" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[RRA64]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- remoteControlTest -->
+        <test-method is-config="true" signature="reboot()[pri:0, instance:autobusinesstest.pcaptest.MihomeCapturePackageTest@33b37288]" started-at="2022-10-19T03:58:50Z" name="reboot" finished-at="2022-10-19T03:58:51Z" duration-ms="1235" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- reboot -->
+        <test-method signature="maintenanceTest(java.lang.String)[pri:0, instance:autobusinesstest.pcaptest.MihomeCapturePackageTest@33b37288]" started-at="2022-10-19T03:58:51Z" name="maintenanceTest" finished-at="2022-10-19T03:58:51Z" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[RRA64]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- maintenanceTest -->
+        <test-method is-config="true" signature="reboot()[pri:0, instance:autobusinesstest.pcaptest.MihomeCapturePackageTest@33b37288]" started-at="2022-10-19T03:58:51Z" name="reboot" finished-at="2022-10-19T03:58:52Z" duration-ms="1294" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- reboot -->
+        <test-method signature="errorImageTest(java.lang.String)[pri:0, instance:autobusinesstest.pcaptest.MihomeCapturePackageTest@33b37288]" started-at="2022-10-19T03:58:52Z" name="errorImageTest" finished-at="2022-10-19T03:58:52Z" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[RRA64]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- errorImageTest -->
+      </class> <!-- autobusinesstest.pcaptest.MihomeCapturePackageTest -->
+    </test> <!-- MihomeCapturePackageTest -->
+  </suite> <!-- MICapturePackage -->
+</testng-results>
