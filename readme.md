@@ -110,16 +110,3 @@ adb shell dumpsys window w | findstr mCurrent
   mCurrentFocus=Window{ec919b8 u0 com.xiaomi.smarthome/com.xiaomi.smarthome.SmartHomeMainActivity}
 ```
 
-## 米家账号备份
-mihome.username=1155970109  
-mihome.password=hu86505721111
-mihome.username=capturepackage-cntest@roborock.com
-mihome.password=Mijia20220011
-## 石头账号备份
-rr.username=commit-test@roborock.com
-rr.password=Commit_2022  
-rr.username=capturepackage-cntest@roborock.com
-rr.password=Pcapcntest21
-## 米家测试机器名称备份
-石头自清洁扫拖机器人G10S  
-Roborock S7 MaxV
